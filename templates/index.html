@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card animate__animated animate__fadeInUp">
+    <form id="resume-form" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="job_category">
+                <i class="fas fa-briefcase"></i> Job Category
+            </label>
+            <div class="select-wrapper">
+                <select id="job_category" name="job_category" required>
+                    <option value="">Select a category</option>
+                    {% for category in categories %}
+                    <option value="{{ category }}" {% if job_category==category %}selected{% endif %}>{{
+                        category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="resume_text">
+                <i class="fas fa-file-contract"></i> Resume Text
+            </label>
+            <div class="textarea-container">
+                <textarea id="resume_text" name="resume_text"
+                    placeholder="Paste your resume text here...">{% if resume_text %}{{ resume_text }}{% endif %}</textarea>
+                <div class="textarea-actions">
+                    <button type="button" id="clear-btn" title="Clear text">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button type="button" id="sample-btn" title="Load sample resume">
+                        <i class="fas fa-file-import"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="resume_file">
+                <i class="fas fa-file-upload"></i> Upload Resume
+            </label>
+            <div class="file-upload-container">
+                <input type="file" id="resume_file" name="resume_file" accept=".pdf,.doc,.docx">
+                <div class="file-upload-box" id="file-upload-box">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop your resume or click to browse</p>
+                    <span class="file-types">Supported formats: PDF, DOC, DOCX</span>
+                </div>
+                <div class="file-preview" id="file-preview">
+                    <div class="file-info">
+                        <i class="fas fa-file-alt file-icon"></i>
+                        <div class="file-details">
+                            <span class="file-name">No file selected</span>
+                            <span class="file-size"></span>
+                        </div>
+                    </div>
+                    <button type="button" class="remove-file" id="remove-file">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            <span class="btn-text">Analyze Resume</span>
+            <i class="fas fa-arrow-right"></i>
+            <div class="loader"></div>
+        </button>
+    </form>
+
+    {% if score is defined and score is not none %}
+    <div class="result animate__animated animate__fadeIn">
+        <h3>Results for {{ job_category }}</h3>
+        <div class="score-container">
+            <div class="score-circle" data-score="{{ score|round(0, 'common')|int }}">
+                <div class="score-value">{{ score|round(0, 'common')|int }}</div>
+                <div class="score-label">/10</div>
+            </div>
+            <div class="score-message" id="score-message"></div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="result error animate__animated animate__fadeIn">
+        <h3><i class="fas fa-exclamation-triangle"></i> Error</h3>
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

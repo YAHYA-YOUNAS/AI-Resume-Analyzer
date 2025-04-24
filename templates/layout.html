@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="icon" href="../static/icon.png">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <div class="particles-container" id="particles-js"></div>
+    <div class="container">
+        <header class="animate__animated animate__fadeIn">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <h1>Resume Analyzer</h1>
+            </div>
+            <p class="tagline">Analyze your resume for your dream job</p>
+            <nav class="main-nav">
+                <a href="/" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="/about" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+                <a href="https://yahya-younas.github.io/yahya-younas-portfolio" target="_blank" class="nav-link"><i
+                        class="fas fa-envelope"></i> Contact</a>
+            </nav>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+        <footer class="animate__animated animate__fadeIn">
+            <p>Unlock the potential of your resume with advanced AI analysis</p>
+            <div class="footer-links">
+                <a href="/" class="footer-link"><i class="fas fa-home"></i> Home</a>
+                <a href="/about" class="footer-link"><i class="fas fa-info-circle"></i> About</a>
+                <a href="https://yahya-younas.github.io/yahya-younas-portfolio" target="_blank" class="footer-link"><i
+                        class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
