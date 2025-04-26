@@ -12,13 +12,13 @@ The AI Resume Analyzer is an intelligent tool that helps both job seekers and re
 </p>
 <br/>
 <p align="center">
-  <img src="static/pdf_good_results.png" alt="Real News Example" width="400" height="300"/>&emsp;
-  <img src="static/text_good_results.png" alt="Fake News Example" width="400" height="300"/>
+  <img src="static/pdf_good_results.png" alt="Pdf Good Results Example" width="400" height="300"/>&emsp;
+  <img src="static/text_good_results.png" alt="Text Good Results Example" width="400" height="300"/>
 </p>
 
 <p align="center">
-  <img src="static/text_fair_results.png" alt="Real News Example" width="400" height="300"/>&emsp;
-  <img src="static/text_poor_results.png" alt="Fake News Example" width="400" height="300"/>
+  <img src="static/text_fair_results.png" alt="Text Fair Results Example" width="400" height="300"/>&emsp;
+  <img src="static/text_poor_results.png" alt="Text Poor Results Example" width="400" height="300"/>
 </p>
 
 ## ✨ Key Features
