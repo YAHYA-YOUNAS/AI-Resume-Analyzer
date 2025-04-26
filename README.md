@@ -7,6 +7,20 @@
 
 The AI Resume Analyzer is an intelligent tool that helps both job seekers and recruiters by analyzing resumes against specific job categories. Using advanced NLP and deep learning techniques, it provides a score (0-10) indicating how well a resume matches a particular job category.
 
+<p align="center">
+  <img src="static/app_interface.png" alt="App Interface" width="500"/>
+</p>
+<br/>
+<p align="center">
+  <img src="static/pdf_good_results.png" alt="Real News Example" width="400" height="300"/>&emsp;
+  <img src="static/text_good_results.png" alt="Fake News Example" width="400" height="300"/>
+</p>
+
+<p align="center">
+  <img src="static/text_fair_results.png" alt="Real News Example" width="400" height="300"/>&emsp;
+  <img src="static/text_poor_results.png" alt="Fake News Example" width="400" height="300"/>
+</p>
+
 ## ✨ Key Features
 
 -   **AI-Powered Analysis**: Uses deep learning to evaluate resume content
@@ -38,8 +52,8 @@ The model was trained on [Resume Dataset](https://www.kaggle.com/datasets/gaurav
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/ai-resume-parser.git
-cd ai-resume-parser
+git clone https://github.com/YAHYA-YOUNAS/AI-Resume-Analyzer.git
+cd AI-Resume-Analyzer
 ```
 
 2. Create a virtual environment:
@@ -125,4 +139,4 @@ Contributions are welcome! Please follow these steps:
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
