@@ -21,6 +21,10 @@ The AI Resume Analyzer is an intelligent tool that helps both job seekers and re
 -   **Frontend**: HTML5, CSS3, JavaScript
 -   **Machine Learning**: Scikit-learn, NLTK
 
+## 📊 Dataset Source
+
+The model was trained on [Resume Dataset](https://www.kaggle.com/datasets/gauravduttakiit/resume-dataset)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
